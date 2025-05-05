@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { supabase } from './supabaseClient'
 import StreakTracker from './StreakTracker'
+import ProgressBar from './ProgressBar'
 
 export default function TaskDashboard({ user }) {
   const [tasks, setTasks] = useState([])
@@ -68,6 +69,7 @@ export default function TaskDashboard({ user }) {
       <h2 className="text-2xl font-bold mb-4 text-center">🧠 Your Routine</h2>
 
       <StreakTracker user={user} />
+      <ProgressBar user={user} />
 
       <div className="flex mb-4 gap-2">
         <input
